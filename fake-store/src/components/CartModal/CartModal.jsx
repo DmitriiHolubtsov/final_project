@@ -16,8 +16,13 @@ const CartModal = ({ onClose }) => {
   };
 
   const handleCheckout = () => {
-    navigate("/checkout"); // Redirect to checkout page
-    onClose(); // Close the modal
+    navigate("/checkout");
+    onClose();
+  };
+
+  const handleCart = () => {
+    navigate("/cart");
+    onClose();
   };
 
   const handleQuantityChange = (id, quantity) => {
@@ -85,6 +90,9 @@ const CartModal = ({ onClose }) => {
 
         <Button variant="contained" color="primary" onClick={handleCheckout}>
           Go to Checkout
+        </Button>
+        <Button variant="contained" color="primary" onClick={handleCart}>
+          Go to Your Cart
         </Button>
       </DialogContent>
     </div>

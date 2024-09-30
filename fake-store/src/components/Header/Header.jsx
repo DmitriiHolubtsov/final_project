@@ -42,15 +42,8 @@ const Header = ({ onSearch }) => {
             onChange={handleSearchChange}
             placeholder="Search products..."
           />
-          <button type="submit" className={styles.searchButton}>
-            Search
-          </button>
         </form>
 
-        <nav className={styles.nav}>
-          <a href="/">Catalog</a>
-          <a href="/cart">Cart</a>
-        </nav>
         <IconButton onClick={handleCartOpen}>
           <Badge badgeContent={cart.length} color="secondary">
             <ShoppingCartIcon />

@@ -2,7 +2,7 @@
   background-color: #4caf50;
   
   .headerContent {
-    max-width: 1440px;
+    max-width: 1400px;
     margin: 0 auto;
     width: 100%;
 
@@ -30,7 +30,7 @@
       font-size: 18px;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -38,10 +38,12 @@
   .searchForm {
     display: flex;
     align-items: center;
+    max-width: 500px;
+    width: 100%;
 
     .searchInput {
-      width: 200px;
-      padding: 5px 10px;
+      width: 100%;
+      padding: 10px;
       font-size: 16px;
       border-radius: 5px;
       border: 1px solid #ccc;
