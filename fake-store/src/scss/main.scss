@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./mixins";
+@import "../components/CatalogPage/CatalogPage.scss";
+@import "../components/ProductPage/ProductPage.scss";
+@import "../components/CartPage/CartPage.scss";
+@import "../components/CheckoutPage/CheckoutPage.scss";
+
+// Global styles and resets
+body {
+  font-family: $font-family;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

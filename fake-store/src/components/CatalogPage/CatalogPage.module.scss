@@ -1,0 +1,106 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+// Styles for the catalog page
+.catalogContainer {
+  display: flex;
+  min-height: 50rem;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .filterSidebar {
+    width: 20%;
+    padding: 20px;
+    flex: 1 1 25%;
+    max-width: 25%;
+    border-left: $border-default;
+
+    h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
+
+    .categoryList {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      li {
+        padding: 6px;
+        text-transform: uppercase;
+        font-weight: 600;
+        &:hover {
+          color: $primary-color;
+          cursor: pointer;
+        }
+      };
+    }
+  }
+  .productListWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 75%;
+
+    .productListWrapperHeader {
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      padding: 20px;
+      border-top: $border-default;
+      border-right: $border-default;
+      border-left: $border-default;
+    }
+  }
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .productItem {
+      background-color: white;
+      padding: 20px;
+      border: $border-default;
+      transition: transform 0.3s;
+
+      &:hover {
+        box-shadow: 0 0 1.5rem 0 rgba(50, 50, 50, 0.15);
+        z-index: 7;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      &.onSale {
+        border-color: #ff5722;
+
+        .productPrice {
+          color: #ff5722;
+        }
+      }
+    }
+
+    .productTitle {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .productPrice {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .addToCartBtn {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+  }
+}
