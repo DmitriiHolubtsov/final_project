@@ -9,6 +9,7 @@ import {
   InputLabel,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import Header from "../Header/Header";
 import styles from "./CheckoutPage.module.scss";
 
 const CheckoutPage = () => {
@@ -36,6 +37,8 @@ const CheckoutPage = () => {
 
   return (
     <div>
+      <Header showSearch={false} />
+      <div className={styles.checkoutPageContent}>
       <h1>Checkout</h1>
       <form onSubmit={handleSubmit}>
         <div>
@@ -133,6 +136,7 @@ const CheckoutPage = () => {
           <Button onClick={handleClosePopup}>Close</Button>
         </div>
       )}
+      </div>
     </div>
   );
 };

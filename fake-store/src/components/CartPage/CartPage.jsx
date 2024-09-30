@@ -11,6 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import { removeItem, updateItemQuantity } from "../../redux/cartSlice";
 import Header from "../Header/Header";
+import styles from "./CartPage.module.scss";
 
 const CartPage = () => {
   const dispatch = useDispatch();
@@ -36,8 +37,8 @@ const CartPage = () => {
 
   return (
     <>
-      <Header />
-      <div>
+      <Header showSearch={false} />
+      <div className={styles.cartPageContent}>
         <h1>Your Cart</h1>
         <List>
           {cart.map((item) => (

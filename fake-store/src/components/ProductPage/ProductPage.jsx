@@ -30,7 +30,7 @@ const ProductPage = () => {
 
   return (
     <>
-      <Header />
+      <Header showSearch={false} />
       <div className={styles.productContainer}>
         <img
           src={product.image}
